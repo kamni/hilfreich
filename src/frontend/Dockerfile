@@ -2,7 +2,7 @@
 
 FROM node:26.11-bookworm
 
-ADD src/frontend /app
+ADD . /app
 WORKDIR /app
 
 RUN npm install -g corepack

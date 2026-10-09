@@ -6,7 +6,7 @@ ADD . /app
 WORKDIR /app
 
 RUN npm install -g corepack
-RUN npm install yarn
-RUN yarn
+RUN corepack enable
+RUN yarn install
 
 CMD ["sleep", "infinity"]

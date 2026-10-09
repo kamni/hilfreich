@@ -1,3 +1,4 @@
 J Leadbetter <j@jleadbetter.com>
 Will Cole  <william.lawrence.cole@gmail.com>
 Pi Rat <pirat42@proton.me>
+Stefan Janssen <git@stefanjanssen.nl>

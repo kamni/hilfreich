@@ -27,3 +27,6 @@ Sessionx.vim
 .history/
 # Built Visual Studio Code Extensions
 *.vsix
+
+# Jetbrains IDEs (Webstorm, Rider, etc)
+.idea

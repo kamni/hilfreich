@@ -4,5 +4,5 @@ services:
     ports:
       - "8000:5173"
     volumes:
-      - ./src/frontend:/app
+      - ./src/frontend:/app:z
     command: yarn dev --host 0.0.0.0

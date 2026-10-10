@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { RouterView } from 'vue-router'
+import { ref } from 'vue';
+import { RouterView } from 'vue-router';
 import { useHead } from "vue3-head";
 
-import Header from '@/components/branding/Header.vue'
+import Header from '@/components/branding/Header.vue';
 
-const pageTitle = ref('Page Title: Default')
-const pageDescription = ref('Page Description: Default')
+const pageTitle = ref('Page Title: Default');
+const pageDescription = ref('Page Description: Default');
 
 useHead({
   title: pageTitle,
@@ -20,7 +20,7 @@ useHead({
     { rel: 'icon', href: '/img/favicon-48x48.jpeg', sizes: '48x48' },
     { rel: 'icon', href: '/img/favicon-64x64.jpeg', sizes: '64x64' },
   ],
-})
+});
 </script>
 
 <template>

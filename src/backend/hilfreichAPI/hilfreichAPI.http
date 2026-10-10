@@ -1,0 +1,6 @@
+@hilfreichAPI_HostAddress = http://localhost:5002
+
+GET {{hilfreichAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

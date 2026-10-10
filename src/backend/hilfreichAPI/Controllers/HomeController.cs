@@ -6,9 +6,17 @@ namespace hilfreichAPI.Controllers;
 [ApiController]
 public class HomeController : ControllerBase
 {
+    private ILogger<HomeController> _logger;
+    
+    public HomeController(ILogger<HomeController> logger)
+    {
+        _logger = logger;
+    }
+    
     // GET
     public object Index()
     {
+        _logger.LogInformation("API Get request endpoint hit.");
         return Ok();
     }
 
@@ -16,6 +24,7 @@ public class HomeController : ControllerBase
     [HttpPost]
     public object Test()
     {
+        _logger.LogInformation("Post message received.");
         return Ok("Message Received");
     }
 }

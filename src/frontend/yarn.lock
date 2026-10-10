@@ -1441,6 +1441,11 @@ vue-tsc@^3.3.11:
     "@volar/typescript" "2.4.28"
     "@vue/language-core" "3.3.12"
 
+vue3-head@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/vue3-head/-/vue3-head-1.0.4.tgz#ff6fe955bb5acce13ead26eefec2a1d412fd8ecb"
+  integrity sha512-S/+zDM1pOt58kEprtrQRDtVkeUc/2tBZCf0Ye/Il6C6TwQah47qu+Y8tsF22NhjfcpkgTvjJNrCzrFI35BBUoA==
+
 vue@^3.5.42:
   version "3.5.43"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.5.43.tgz#bab91368e7b9aad9b89dd92e866b120081deb094"

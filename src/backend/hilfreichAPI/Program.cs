@@ -1,6 +1,7 @@
 using hilfreichAPI.Models;
 using hilfreichAPI.Logging;
 using Microsoft.EntityFrameworkCore;
+using hilfreichAPI.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 

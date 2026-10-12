@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { RouterLink } from 'vue-router'
+import { RouterLink } from 'vue-router';
 
-import Logo from '@/components/branding/Logo.vue'
+import Logo from '@/components/branding/Logo.vue';
+import LocaleSelector from '@/components/widgets/LocaleSelector.vue';
 </script>
 
 <template>
@@ -14,6 +15,8 @@ import Logo from '@/components/branding/Logo.vue'
         <RouterLink to="/dashboard">Dashboard</RouterLink>
       </nav>
     </div>
+
+    <LocaleSelector />
   </header>
 </template>
 

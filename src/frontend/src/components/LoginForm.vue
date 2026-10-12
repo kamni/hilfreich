@@ -6,22 +6,26 @@ import TextInput from '@/components/forms/TextInput.vue';
 
 <template>
   <div id="loginForm">
-    <h1>Login</h1>
-
-    <p>Work in progress. Ignore the style.</p>
-
     <form>
       <TextInput
         id="emailInput"
-        label="Email"
-        hint="email"
+        :label="$t('loginForm.emailInput')"
+        :hint="$t('loginForm.emailInputHint')"
       />
       <PasswordInput
         id="passwordInput"
-        label="Password"
-        hint="password"
+        :label="$t('loginForm.passwordInput')"
+        :hint="$t('loginForm.passwordInputHint')"
       />
-      <SubmitButton id="submitPasswordButton" />
+      <SubmitButton
+        id="submitPasswordButton"
+        :buttonText="$t('loginForm.submitButton')"
+      />
     </form>
+
+    <span class='signUp'>
+      {{ $t('loginForm.noAccount') }}
+      <a href="#">{{ $t('loginForm.signUpLink') }}</a>
+    </span>
   </div>
 </template>

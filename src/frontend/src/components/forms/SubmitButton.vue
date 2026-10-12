@@ -8,13 +8,12 @@ const props = withDefaults(defineProps<{
   id: string,
 
   /* What the button should say */
-  buttonText?: string,
+  buttonText: string,
 
   /* Whether the field is read-only, write, or hidden from the user */
   access?: 'write' | 'read' | 'hidden',
 }>(), {
   access: 'write',
-  buttonText: 'Submit',
 });
 
 /* Props passed to the FormElement */

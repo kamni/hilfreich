@@ -1,8 +1,6 @@
 <template>
   <div class="wrapper">
     <img alt="Hilfreich logo" class="logo" src="@/assets/img/hilfreich-logo.png" />
-
-    <h1>e.V.</h1>
   </div>
 </template>
 

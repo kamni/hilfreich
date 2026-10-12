@@ -43,7 +43,7 @@ const togglePasswordVisibility = (): void => {
         class="passwordInput__showPasswordButton"
         type="button"
         @click="togglePasswordVisibility"
-      >{{ passwordIsMasked ? 'Show' : 'Hide' }}</button>
+      >{{ passwordIsMasked ? $t('passwordInput.show') : $t('passwordInput.hide') }}</button>
     </div>
   </FormElement>
 </template>

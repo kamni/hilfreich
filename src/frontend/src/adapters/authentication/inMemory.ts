@@ -1,22 +1,13 @@
 import { AuthenticationPort } from '@/adapters/authentication/port';
 
 /**
- * Indicates how the adapter should report log-in status.
- */
-export enum InMemoryAuthenticationAdapterStatus {
-  // Every view will show up as correctly authenticated
-  ALWAYS,
-  // Simulates login/logout abilities with fake user accounts
-  WITH_LOGIN,
-}
-
-/**
  * Basic email -> password lookup.
  * Obviously no security;
  * for testing purposes only.
  */
 export type MockUserAuthDatabase = {
   [key: string]: string,
+}
 
 /**
  * Mock adapter that can be used to simulate various log-in testing scenarios.
@@ -26,22 +17,22 @@ export class InMemoryAuthenticationAdapter implements AuthenticationPort {
   email: string | null;
 
   // If configured as ALWAYS, the adapter will always report being logged in
-  private _configuredStatus: boolean;
+  private _configuredAlwaysLoggedIn: boolean;
   // A mock database to do an email/password lookup
   private _configuredDatabase: MockUserAuthDatabase | null;
 
   private _alwaysLoggedIn(): boolean {
-    return this._configuredStatus === InMemoryAuthenticationAdapterStatus.ALWAYS;
+    return this._configuredAlwaysLoggedIn;
   }
 
   // If authDatabase is null,
-  // login isn't possible, unless status = ALWAYS
+  // login isn't possible, unless alwaysLoggedIn is true
   constructor(
-    authStatus: InMemoryAuthenticationAdapterStatus,
-    authDatabase: MockUserAuthDatabase | null,
+    authDatabase?: MockUserAuthDatabase,
+    alwaysLoggedIn?: boolean = false,
   ) {
-    this._configuredStatus = authStatus;
-    this._configuredDatabase = authDatabase;
+    this._configuredAuthDatabase: = authDatabase | {} ;
+    this._configuredAlwaysLoggedIn = alwaysLoggedIn;
 
     if ( this._alwaysLoggedIn() ) {
       this.authenticated = true;
@@ -54,7 +45,7 @@ export class InMemoryAuthenticationAdapter implements AuthenticationPort {
 
   authenticate(email: string, password: string): Promise<boolean> {
     // We don't allow re-authentication without explicit sign-out
-    if (!this.authenticated) {
+    if ( !this.authenticated ) {
       let passwordFound = this._configuredDatabase.get(email)
       if ( !!passwordFound && passwordFound === password ) {
         this.authenticated = true;
